@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Review Analyzer</title>
+</head>
+<body>
+    
+    <h1>Movie Review Analyzer</h1>
+    <a href='/monitor'> All Reviews </a>
+    <form action="/submit" method="post">
+        <input type="text" id="review" name="user_input" value="{{review}}" required style="width: 300px; height: 40px; font-size: 18px;">
+        <button type="submit" style="width: 300px; height: 40px; font-size: 18px;">Submit</button>
+    </form>
+    {% if sentiment == 0 %}
+    <p style="font-size: 100px;"> &#129326; </p>
+    {% elif sentiment == 1 %}
+    <p style="font-size: 100px;"> &#129298; </p>
+    {% elif sentiment == 2 %}
+    <p style="font-size: 100px;"> &#128580; </p>
+    {% elif sentiment == 3 %}
+    <p style="font-size: 100px;"> &#128578; </p>
+    {% elif sentiment == 4 %}
+    <p style="font-size: 100px;"> &#129321; </p>
+    {% endif %}
+
+    
+</body>
+</html>
